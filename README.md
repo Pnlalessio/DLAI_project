@@ -31,10 +31,11 @@ The command 'python train.py' allows training an agent with default hyperparamet
  Example of a command (do not copy the quotation marks):    
 'python train.py --evaluate_every 500 --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'
 
-2. To resume training from a previously calculated solution, you can execute one of the following commands (do not copy the quotation marks) and if you want, you can add the other options to personalize these basic commands:  
-   'python train.py --remember_training_cma yes --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'  
-   'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches no'  
-   'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches yes'  
+2. To resume training from a previously calculated solution, you can execute one of the following commands (do not copy the quotation marks) and if you want, you can add the other options to personalize these basic and mandatory commands:
+   To resume training using only the coordinates of the top K best patch centers as features inputted to the controller, use the following command:  
+   1. 'python train.py --remember_training_cma yes --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'  
+   2. 'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches no'  
+   3. 'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches yes'  
 
 # Testing on pre-trained models.
 
