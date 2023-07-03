@@ -27,7 +27,7 @@ The command 'python train.py' allows training an agent with default hyperparamet
 --evaluate_every 'an integer representing after how many iterations the model is evaluated'  
 --remember_training_cma 'Enter the string 'no' if you want to start training from scratch, or 'yes' if you want to resume training from a previously calculated solution.'  
 --feature_retrieval_strategy 'choose the string "positions" to use the coordinates (centers) of the top patches as features, or choose "colors_and_positions" to include the average colors of the top patches as well.'  
---active_double_self_attention_on_best_patches 'Enter the string "yes" if you want to utilize the Double Self Attention during training, or "no" if you prefer not to use it.'
+--active_double_self_attention_on_best_patches 'Enter the string "yes" if you want to utilize the Double Self Attention during training, or "no" if you prefer not to use it.'  
  Example of a command (do not copy the quotation marks):    
 'python train.py --evaluate_every 500 --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'
 
