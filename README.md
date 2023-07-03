@@ -35,7 +35,8 @@ The command 'python train.py' allows training an agent with default hyperparamet
    To resume training using only the coordinates of the top K best patch centers as features inputted to the controller, use the following command:    
    1. 'python train.py --remember_training_cma yes --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'
    
-   To resume training from a previously calculated solution using both the coordinates of the centers of the top K patches and the average color values of the selected K patches as input features for the controller, use the following command:        
+   To resume training from a previously calculated solution using both the coordinates of the centers of the top K patches and the average color values of the selected K patches as input features for the controller, use the following command:
+           
    2. 'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches no'
    
    To resume training from a previously calculated solution that also utilizes the "Double" Self Attention, use the following command: 
