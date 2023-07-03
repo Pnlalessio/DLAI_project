@@ -44,6 +44,18 @@ The command 'python train.py' allows training an agent with default hyperparamet
    3. 'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches yes'  
 
 # Testing on pre-trained models
-If you want to test the best solutions obtained, navigate to the "test.py" file level. Explore the "solutions" folder, which contains three subfolders named "only_positions," "double_self_attention," and "colors_and_positions." Each folder contains the best solutions generated from different training types indicated by their names. Copy the complete path of the desired solution to test the agent and execute one of the following commands:
+If you want to test the best solutions obtained, navigate to the "test.py" file level. Explore the "solutions" folder, which contains three subfolders named "only_positions," "double_self_attention," and "colors_and_positions." Each folder contains the best solutions generated from different training types indicated by their names. Copy the complete path of the desired solution to test the agent and execute one of the following commands (do not copy the quotation marks):  
+
+If the solution you want to test is located within the "only_positions" folder, copy and execute the following command to the terminal:  
+
+1. 'python test.py --test_from_solution_at "Replace with the path of the solution to be tested" --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'
+
+If the solution you want to test is located within the "colors_and_positions" folder, copy and execute the following command to the terminal:
+ 
+2. 'python test.py --test_from_solution_at "Replace with the path of the solution to be tested" --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches no'
+
+If the solution you want to test is located within the "double_self_attention" folder, copy and execute the following command to the terminal:  
+
+3. 'python test.py --test_from_solution_at "Replace with the path of the solution to be tested" --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches yes'  
 
 # Procgen StarPilot gameplay demo
