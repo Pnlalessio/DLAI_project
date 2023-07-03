@@ -11,7 +11,9 @@ By sorting the patch importance vector, we extract the indices of the top K patc
 The concept is to use the initial self-attention to select the top K patches crucial for each timestep. Preserving the centers' coordinates' mapping to the original observation, these patches are used to compute a new 'Double' self-attention. The 'Double' self-attention calculates the dot product solely among these K best patches, already chosen by the initial self-attention, rather than the entire observation. This allows us to focus specifically on patches that play the most crucial role and are thus located closest to the agent's current patch. The "Double" self-attention compels the agent to pay greater attention to the most important patches among those deemed relevant by the initial self-attention.
 
 # Training with CMA-ES
-The network was trained with Covariance-Matrix Adaptation Evolution Strategy (CMA-ES), a genetic algorithm, due to the non-differentiable nature of obtaining the top K sorted patches. Genetic algorithms excel in reinforcement learning, handling scenarios with rewards available either at each timestep or cumulatively at the task's end.
+The network was trained with Covariance-Matrix Adaptation Evolution Strategy (CMA-ES), a genetic algorithm, due to the non-differentiable nature of obtaining the top K sorted patches. Genetic algorithms excel in reinforcement learning, handling scenarios with rewards available either at each timestep or cumulatively at the task's end.  
+I trained the different models using a 2018 MacBook Pro without a GPU compatible with PyTorch. To speed up the training process, given the lack of a GPU, I utilized the "multiprocessing" package to parallelize the CMA-ES training across 8 workers. This approach allowed each model to complete approximately 2500 iterations of CMA-ES in about a week and a half.  
+
 There are 2 options:
 1. If you want to train a new network from scratch, simply copy one of the following commands (without copying the apexes) into the terminal, depending on the type of training you want to perform.
 First, position yourself at the 'solutions' folder level without entering it.
@@ -21,11 +23,11 @@ The command 'python train.py' allows training an agent with default hyperparamet
 --number_rollouts 'an integer representing the number of rollouts'    
 --popsize_cma 'an integer representing the population size of the CMA-ES'    
 --initial_std_cma 'an float representing the initial standard deviation of the CMA-ES'  
---number_workers  
---evaluate_every  
---remember_training_cma  
---feature_retrieval_strategy  
---active_double_self_attention_on_best_patches  
+--number_workers 'an integer representing the number of workers used to train in parallel the agent'  
+--evaluate_every 'an integer representing after how many iterations the model is evaluated'  
+--remember_training_cma 'Enter the string 'no' if you want to start training from scratch, or 'yes' if you want to resume training from a previously calculated solution.'  
+--feature_retrieval_strategy 'choose the string "positions" to use the coordinates (centers) of the top patches as features, or choose "colors_and_positions" to include the average colors of the top patches as well.'  
+--active_double_self_attention_on_best_patches 'Enter the string "yes" if you want to utilize the Double Self Attention during training, or "no" if you prefer not to use it.'    
 
 # Testing on pre-trained models.
 
