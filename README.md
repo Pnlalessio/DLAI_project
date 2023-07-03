@@ -15,17 +15,17 @@ The network was trained with Covariance-Matrix Adaptation Evolution Strategy (CM
 There are 2 options:
 1. If you want to train a new network from scratch, simply copy one of the following commands (without copying the apexes) into the terminal, depending on the type of training you want to perform.
 First, position yourself at the 'solutions' folder level without entering it.
-The command 'python train.py' allows training an agent with default hyperparameters (described and explained in the 'def make_argparse()' function within the 'train.py' file). If you want to train the agent differently, with different features, or modify certain CMA-ES hyperparameters, you can append one or more of the following options to the 'python train.py' command:
---seed 'an integer representing the CMA-ES seed'
---max_iterations_cma 'an integer representing the maximum number of iterations performed in the CMA-ES.'
---number_rollouts 'an integer representing the number of rollouts'
---popsize_cma 'an integer representing the population size of the CMA-ES'
---initial_std_cma 'an float representing the initial standard deviation of the CMA-ES'
---number_workers
---evaluate_every
---remember_training_cma
---feature_retrieval_strategy
---active_double_self_attention_on_best_patches
+The command 'python train.py' allows training an agent with default hyperparameters (described and explained in the 'def make_argparse()' function within the 'train.py' file). If you want to train the agent differently, with different features, or modify certain CMA-ES hyperparameters, you can append one or more of the following options to the 'python train.py' command:  
+--seed 'an integer representing the CMA-ES seed'  
+--max_iterations_cma 'an integer representing the maximum number of iterations performed in the CMA-ES.'  
+--number_rollouts 'an integer representing the number of rollouts'    
+--popsize_cma 'an integer representing the population size of the CMA-ES'    
+--initial_std_cma 'an float representing the initial standard deviation of the CMA-ES'  
+--number_workers  
+--evaluate_every  
+--remember_training_cma  
+--feature_retrieval_strategy  
+--active_double_self_attention_on_best_patches  
 
 # Testing on pre-trained models.
 
