@@ -33,22 +33,22 @@ The command 'python train.py' allows training an agent with default hyperparamet
 
 2. To resume training from a previously calculated solution, you can execute one of the following commands (do not copy the quotation marks) and if you want, you can add the other options to personalize these basic and mandatory commands:  
    To resume training using only the coordinates of the top K best patch centers as features inputted to the controller, use the following command:    
-   1. 'python train.py --remember_training_cma yes --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'
+   1. 'python train.py --remember_training_cma yes --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no --resume_old_solution_from "Replace this space with the path of one of the solutions found in the folder named 'only_positions'"'   
    
    To resume training from a previously calculated solution using both the coordinates of the centers of the top K patches and the average color values of the selected K patches as input features for the controller, use the following command:
            
-   2. 'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches no'
+   2. 'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches no --resume_old_solution_from "Replace this space with the path of one of the solutions found in the folder named 'colors_and_positions'"'  
    
    To resume training from a previously calculated solution that also utilizes the "Double" Self Attention, use the following command: 
   
-   3. 'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches yes'  
+   3. 'python train.py --remember_training_cma yes --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches yes --resume_old_solution_from "Replace this space with the path of one of the solutions found in the folder named 'double_self_attention'"'  
 
 # Testing on pre-trained models
 If you want to test the best solutions obtained, navigate to the "test.py" file level. Explore the "solutions" folder, which contains three subfolders named "only_positions," "double_self_attention," and "colors_and_positions." Each folder contains the best solutions generated from different training types indicated by their names. Copy the complete path of the desired solution to test the agent and execute one of the following commands (do not copy the quotation marks):  
 
 If the solution you want to test is located within the "only_positions" folder, copy and execute the following command to the terminal:  
 
-1. 'python test.py --test_from_solution_at "Replace with the path of the solution to be tested" --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'
+1. 'python test.py --test_from_solution_at "Replace with the path of the solution to be tested" --feature_retrieval_strategy positions --active_double_self_attention_on_best_patches no'  
 
 If the solution you want to test is located within the "colors_and_positions" folder, copy and execute the following command to the terminal:
  
