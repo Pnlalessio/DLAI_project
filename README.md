@@ -56,6 +56,10 @@ If the solution you want to test is located within the "colors_and_positions" fo
 
 If the solution you want to test is located within the "double_self_attention" folder, copy and execute the following command to the terminal:  
 
-3. 'python test.py --test_from_solution_at "Replace with the path of the solution to be tested" --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches yes'  
+3. 'python test.py --test_from_solution_at "Replace with the path of the solution to be tested" --feature_retrieval_strategy colors_and_positions --active_double_self_attention_on_best_patches yes'
+
+ If you want to change the number of episodes to test the chosen solution, you can add the following option to each of the previous commands:  
+
+ --num_episodes 'integer representing the number of episodes you want to test for the solution selected'  
 
 # Procgen StarPilot gameplay demo
