@@ -72,11 +72,11 @@ If the solution you want to test is located within the "double_self_attention" f
 # Procgen StarPilot gameplay demo
 This section includes 3 links, each showcasing a demo of the agent's movement in the StarPilot game after approximately 2500 iterations of CMA-ES.  
 
-1. The first video demonstrates the agent tested in "only_positions" mode, where the agent's controller receives the coordinates of the K best patch centers as features.  
+1. The first video demonstrates the agent tested in "only_positions" mode, where the agent's controller receives the coordinates of the K best patch centers as features.
 
-This is the link of the video: [only_positions_agent](https://youtu.be/iMH4zI7470I)  
+   This is the link of the video: [only_positions_agent](https://youtu.be/iMH4zI7470I)  
 
-2. In the second video, the agent is tested in the "colors_and_positions" mode. The controller of the agent receives in input both the coordinates of the K best patch centers and average RGB color values of the K best patches.  
+3. In the second video, the agent is tested in the "colors_and_positions" mode. The controller of the agent receives in input both the coordinates of the K best patch centers and average RGB color values of the K best patches.  
 
 This is the link of the video: [colors_and_positions_agent](https://youtu.be/wey2SWw6o44)  
 
