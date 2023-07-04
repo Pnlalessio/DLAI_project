@@ -70,4 +70,8 @@ If the solution you want to test is located within the "double_self_attention" f
  The command will resolve the packages specified in the file and install them in the environment.  
 
 # Procgen StarPilot gameplay demo
-[a link](https://youtu.be/iMH4zI7470I)
+This section includes three links, each showcasing a demo of the agent's movement in the StarPilot game after approximately 2500 iterations of CMA-ES.  
+
+The first video demonstrates the agent tested in "only_positions" mode, where the agent's controller receives the coordinates of the K best patch centers as features.  
+
+[only_positions_agent](https://youtu.be/iMH4zI7470I)
