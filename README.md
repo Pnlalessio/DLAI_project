@@ -60,6 +60,13 @@ If the solution you want to test is located within the "double_self_attention" f
 
  If you want to change the number of episodes to test the chosen solution, you can add the following option to each of the previous commands:  
 
- --num_episodes 'integer representing the number of episodes you want to test for the solution selected'  
+ --num_episodes 'integer representing the number of episodes you want to test for the solution selected' 
+
+ # Install dependencies
+ If you have created your environment, you can use the –file flag with the conda install command as:  
+
+ conda install --file requirements.txt  
+
+ The command will resolve the packages specified in the file and install them in the environment.  
 
 # Procgen StarPilot gameplay demo
