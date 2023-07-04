@@ -74,8 +74,8 @@ This section includes three links, each showcasing a demo of the agent's movemen
 
 The first video demonstrates the agent tested in "only_positions" mode, where the agent's controller receives the coordinates of the K best patch centers as features.  
 
-This is the link: [only_positions_agent](https://youtu.be/iMH4zI7470I)  
+This is the link of the video: [only_positions_agent](https://youtu.be/iMH4zI7470I)  
 
 In the third video, the agent is tested in "Double" Self Attention mode. We can observe how the agent moves in quick bursts, paying greater attention primarily to nearby enemies. This is in contrast to the agents tested in the other two modes, where movement is more continuous as attention is spread across the entire observation without focusing on a specific point.  
 
-[double_self_attention_agent](https://youtu.be/j_51JxhQEno)
+This is the link of the video: [double_self_attention_agent](https://youtu.be/j_51JxhQEno)
