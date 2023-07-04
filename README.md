@@ -5,7 +5,7 @@ This repository contains the Deep Learning and Applied AI project, aiming to rep
 The core concept combines attention with image processing by dividing them into N patches. A self-attention mechanism assesses patch importance and information content. To enhance focus, a trainable module selects k patches from N, creating an attention bottleneck. This prioritizes crucial patches while disregarding less impactful ones. These crucial patches form the patch importance vector.
 
 # Patch Selection, Feature retrieval and Controller
-By sorting the patch importance vector, we extract the indices of the top K patches. These indices are associated with their respective features and fed into the controller module for action determination. The controller can receive two types of features: the coordinates of the K best patch centers (as in the original paper) or a novel approach involving both patch coordinates and average RGB color values. The controller architecture resembles the one described in the paper, utilizing an LSTM for sequential decision-making, with an additional linear layer and ReLU activation function preceding the output.
+By sorting the patch importance vector, we extract the indices of the top K patches. These indices are associated with their respective features and fed into the controller module for action determination. The controller can receive two types of features: the coordinates of the K best patch centers (as in the original paper) or a novel approach involving both patch coordinates and average RGB color values of the K best patches. The controller architecture resembles the one described in the paper, utilizing an LSTM for sequential decision-making, with an additional linear layer and ReLU activation function preceding the output.
 
 # My "Double" Self Attention
 The concept is to use the initial self-attention to select the top K patches crucial for each timestep. Preserving the centers' coordinates' mapping to the original observation, these patches are used to compute a new 'Double' self-attention. The 'Double' self-attention calculates the dot product solely among these K best patches, already chosen by the initial self-attention, rather than the entire observation. This allows us to focus specifically on patches that play the most crucial role and are thus located closest to the agent's current patch. The "Double" self-attention compels the agent to pay greater attention to the most important patches among those deemed relevant by the initial self-attention.
@@ -75,6 +75,10 @@ This section includes three links, each showcasing a demo of the agent's movemen
 The first video demonstrates the agent tested in "only_positions" mode, where the agent's controller receives the coordinates of the K best patch centers as features.  
 
 This is the link of the video: [only_positions_agent](https://youtu.be/iMH4zI7470I)  
+
+In the second video, the agent is tested in the "colors_and_positions" mode. The controller of the agent receives in input both the coordinates of the K best patch centers and average RGB color values of the K best patches.  
+
+This is the link of the video: [colors_and_positions_agent](https://youtu.be/wey2SWw6o44)  
 
 In the third video, the agent is tested in "Double" Self Attention mode. We can observe how the agent moves in quick bursts, paying greater attention primarily to nearby enemies. This is in contrast to the agents tested in the other two modes, where movement is more continuous as attention is spread across the entire observation without focusing on a specific point.  
 
