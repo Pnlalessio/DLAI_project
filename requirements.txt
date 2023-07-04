@@ -1,0 +1,8 @@
+python==3.8.2
+pytorch==1.4.0
+numpy==1.18.1
+opencv==4.2.0
+cma==2.7.0
+procgen==0.10.7
+gym[box2d]==0.17.1
+pillow==9.3.0
