@@ -76,10 +76,10 @@ This section includes 3 links, each showcasing a demo of the agent's movement in
 
    This is the link of the video: [only_positions_agent](https://youtu.be/iMH4zI7470I)  
 
-3. In the second video, the agent is tested in the "colors_and_positions" mode. The controller of the agent receives in input both the coordinates of the K best patch centers and average RGB color values of the K best patches.  
+2. In the second video, the agent is tested in the "colors_and_positions" mode. The controller of the agent receives in input both the coordinates of the K best patch centers and average RGB color values of the K best patches.
 
-This is the link of the video: [colors_and_positions_agent](https://youtu.be/wey2SWw6o44)  
+   This is the link of the video: [colors_and_positions_agent](https://youtu.be/wey2SWw6o44)  
 
-3. In the third video, the agent is tested in "Double" Self Attention mode. We can observe how the agent moves in quick bursts, paying greater attention primarily to nearby enemies. This is in contrast to the agents tested in the other two modes, where movement is more continuous as attention is spread across the entire observation without focusing on a specific point.  
+3. In the third video, the agent is tested in "Double" Self Attention mode. We can observe how the agent moves in quick bursts, paying greater attention primarily to nearby enemies. This is in contrast to the agents tested in the other two modes, where movement is more continuous as attention is spread across the entire observation without focusing on a specific point.
 
-This is the link of the video: [double_self_attention_agent](https://youtu.be/j_51JxhQEno)
+   This is the link of the video: [double_self_attention_agent](https://youtu.be/j_51JxhQEno)
